@@ -120,3 +120,7 @@ def contato():
 def sobre():
     return '44 anos, casada e mãe de uma menina linda. Temente a Deus e feliz sewmpe!!!'
 
+@app.route('/projetos')
+def projetos():
+    return 'Projetos'
+
