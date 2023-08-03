@@ -1,13 +1,36 @@
 {% extends 'base.html' %}
-
 {% block conteudo %}
 <section>
     <div class="banner">
         <img src="caminho-para-imagem.jpg" alt="Banner da Página Inicial">
     </div>
     <div class="conteudo-principal">
-        <h2>Inicio</h2>
-        <p>Seja bem-vindo à nossa página inicial! Aqui você encontrará informações incríveis.</p>
+        <h2 class="content-title">Seja bem-vindo à nossa Página Inicial!</h2>
+        <p class="welcome-text">Explore uma jornada de aprendizado e descoberta conosco.</p>
+        <h3 class="section-title">Nossos Cursos em Destaque</h3>
+        <ul class="cursos-destaque">
+            <li>
+                <h4>Curso de Matemática Avançada</h4>
+                <p class="course-description">Aprofunde seus conhecimentos em matemática com nosso curso avançado.</p>
+            </li>
+            <li>
+                <h4>Curso de Ciências Naturais</h4>
+                <p class="course-description">Explore os mistérios da natureza em nosso curso de ciências naturais.</p>
+            </li>
+            <li>
+                <h4>Curso de Línguas Estrangeiras</h4>
+                <p class="course-description">Aprenda novos idiomas e amplie seus horizontes culturais.</p>
+            </li>
+        </ul>
+        <h3 class="section-title">Sobre Nós</h3>
+        <p class="about-text">Nossa instituição está comprometida em fornecer educação de alta qualidade para todos os alunos interessados em aprender.</p>
+        <p class="about-text">Com uma equipe experiente de professores e uma abordagem prática de ensino, estamos dedicados a preparar nossos alunos para um futuro de sucesso.</p>
+        <h3 class="section-title">Contate-nos</h3>
+        <p class="contact-text">Estamos sempre prontos para responder às suas perguntas. Entre em contato conosco pelo telefone, e-mail ou visite nossa sede.</p>
     </div>
 </section>
 {% endblock %}
+
+
+
+

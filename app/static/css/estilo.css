@@ -1,18 +1,25 @@
-body {
-    font-family: Arial, sans-serif;
+/* Basic Reset */
+body, h1, h2, h3, h4, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
 header {
-    background-color: #2980b9; /* Azul escuro */
+    background-color: #2980b9; /* Dark Blue */
     color: white;
     padding: 10px;
     text-align: center;
 }
 
+/* Navigation Styles */
 nav {
-    background-color: #3498db; /* Azul claro */
+    background-color: #3498db; /* Light Blue */
     color: white;
     display: flex;
     justify-content: center;
@@ -25,18 +32,9 @@ nav a {
     margin: 0 20px;
 }
 
+/* Content Styles */
 section {
     padding: 20px;
-}
-
-footer {
-    background-color: #34495e; /* Azul acinzentado */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 .banner {
@@ -56,4 +54,35 @@ footer {
     margin-top: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
+h2.content-title {
+    color: #e67e22; /* Orange */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p.welcome-text {
+    color: #444; /* Dark Gray */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h3.section-title {
+    color: #2980b9; /* Dark Blue */
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+ul.cursos-destaque {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cursos-destaque li {
+    flex: 1;
+    background-color: white;
+
+
 
