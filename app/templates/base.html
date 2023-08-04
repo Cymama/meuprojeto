@@ -4,28 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{titulo}}</title>
-    <style>
-    </style>
-     <link rel="stylesheet" href="{{url_for('static',filename='css/estilo.css')}}">
-
-
+    <link rel="stylesheet" href="{{url_for('static',filename='css/estilo.css')}}">
 </head>
 <body>
     <header>
-        <h1>Meu Site</h1>
+        <h1>Meu Blog</h1>
     </header>
     <nav>
         <a href="/">Página inicial</a>
         <a href="/sobre">Sobre</a>
         <a href="/contatos">Contato</a>
+        <a href="/projetos">Projetos</a>
     </nav>
-    
+         
     {% block conteudo %}
-
     {% endblock %}
-  
+       
     <footer>
-        <p>Rodapé do meu site &copy; 2023</p>
+        <p>Programado por Cylene Santos &copy; 2023</p>
     </footer>
 </body>
 </html>
+

@@ -12,3 +12,7 @@ def contatos():
 @app.route('/sobre')
 def sobre():
     return render_template ('sobre.html', titulo = 'Sobre')
+
+@app.route('/projetos')
+def projetos():
+    return render_template ('projetos.html', titulo = 'Projetos')
