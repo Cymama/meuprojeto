@@ -3,6 +3,23 @@
 {% block conteudo %}
 <section>
     <h2>Contatos</h2>
-    <p>Conteúdo de contatos</p>
+    <p>Use o formulário abaixo para entrar em contato conosco:</p>
+    
+    <form action="/"method="post">
+        {{ formulario.csrf_token }}
+        <label for="nome">Nome:</label>
+        {{ formulario.nome }}
+        
+        <label for="telefone">Telefone:</label>
+        {{ formulario.telefone }}
+        
+        <label for="email">E-mail:</label>
+        {{ formulario.email }}
+        
+        <label for="mensagem">Mensagem:</label>
+        {{ formulario.mensagem }}
+
+        {{ formulario.enviar }}
+    </form>
 </section>
 {% endblock %}
