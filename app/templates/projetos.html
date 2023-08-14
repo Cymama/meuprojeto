@@ -2,13 +2,34 @@
 
 {% block conteudo %}
 
-<h1>Meus Projetos</h1>
-</header>
-<nav>
-  <ul>
-    <li><a href="#projeto1">Projeto 1</a></li>
-    <li><a href="#projeto2">Projeto 2</a></li>
-    <li><a href="#projeto3">Projeto 3</a></li>
-  </ul>
-  
-  {% endblock %}
+<section class="container mt-4">
+    <h1 class="mb-4">Meus Projetos de Viagem</h1>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="post">
+                <img src="https://www.voltaaomundo.pt/files/2020/01/6-1.jpg" alt="Projeto 1" class="img-fluid">
+                <h2 class="post-title">Viagem à Europa</h2>
+                <p class="post-content">Explore as maravilhas da Europa enquanto mergulha na história, cultura e culinária de diversos países.</p>
+                <a href="#projeto1" class="btn btn-primary">Detalhes</a>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="post">
+                <img src="https://www.audiograma.com.br/wp-content/uploads/2019/03/volta-ao-mundo-5-musicas.jpg" alt="Projeto 2" class="img-fluid">
+                <h2 class="post-title">Volta ao Mundo em 80 Dias</h2>
+                <p class="post-content">Aventure-se em uma jornada épica ao redor do mundo, explorando diferentes continentes e culturas em 80 dias.</p>
+                <a href="#projeto2" class="btn btn-primary">Detalhes</a>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="post">
+                <img src="https://th.bing.com/th/id/R.f2f5af9c808c4724545e0968a9f4eb94?rik=%2fO55cUT7ceqYBA&riu=http%3a%2f%2fcdn.luex.com%2fcms%2fuploads%2ftx_templavoila%2fBali---Anantara.jpg&ehk=twGSxY4R%2fpNBW12oz8GJ845Zn3LedAHNv5KtNtZjZms%3d&risl=&pid=ImgRaw&r=0" alt="Projeto 3" class="img-fluid">
+                <h2 class="post-title">Descobrindo Destinos Exóticos</h2>
+                <p class="post-content">Parta em uma aventura para destinos menos conhecidos, explorando a beleza e autenticidade de locais exóticos.</p>
+                <a href="#projeto3" class="btn btn-primary">Detalhes</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

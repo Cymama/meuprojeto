@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{titulo}}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/estilo.css')}}">
 </head>
 <body>
-    <header>
+    <header class="bg-info text-white text-center py-4">
         <h1>Meu Blog</h1>
     </header>
-    <nav>
-        <a href="/">Página inicial</a>
-        <a href="/sobre">Sobre</a>
-        <a href="/contatos">Contato</a>
-        <a href="/projetos">Projetos</a>
+    <nav class="bg-primary text-white text-center py-2">
+        <a href="/" class="text-white">Página inicial</a>
+        <a href="/sobre" class="text-white">Sobre</a>
+        <a href="/contatos" class="text-white">Contato</a>
+        <a href="/projetos" class="text-white">Projetos</a>
     </nav>
          
-    {% block conteudo %}
-    {% endblock %}
+    <div class="container mt-4">
+        {% block conteudo %}
+        {% endblock %}
+    </div>
        
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         <p>Programado por Cylene Santos &copy; 2023</p>
     </footer>
+
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
 </body>
 </html>
+
 
