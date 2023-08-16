@@ -111,7 +111,3 @@ form button[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-form button[type="submit"]:hover {
-    background-color: #5FA686;
-}
-

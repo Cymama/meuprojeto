@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<section>
+    <h2>Cadastre-se</h2>
+    <form action="{{ url_for('cadastrar') }}" method="post">
+        {{ cadastro.csrf_token }}
+        
+        <label for="nome">Nome:</label>
+        {{ cadastro.nome }}
+        
+        <label for="sobrenome">Sobrenome:</label>
+        {{ cadastro.sobrenome }}
+        
+        <label for="email">E-mail:</label>
+        {{ cadastro.email }}
+        
+        <label for="senha">Senha:</label>
+        {{ cadastro.senha }}
+        
+       
+        {{ cadastro.enviar }}
+    </form>
+</section>
+{% endblock %}
