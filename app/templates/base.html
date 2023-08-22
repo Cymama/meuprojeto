@@ -3,27 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{titulo}}</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/estilo.css')}}">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
 </head>
 <body>
     <header class="bg-info text-white text-center py-4">
         <h1>Meu Blog</h1>
     </header>
-    <nav class="bg-primary text-white text-center py-2">
-        <a href="/" class="text-white">Página inicial</a>
-        <a href="/sobre" class="text-white">Sobre</a>
-        <a href="/contatos" class="text-white">Contato</a>
-        <a href="/projetos" class="text-white">Projetos</a>
-     {% if session['email'] %}
-     <nav  class="text-white">Olá, {{  session['nome'] }}</nav>
-     <a href="/sair" class="text-white">Sair</a>
-     {% else %}
-     <a href="/cadastro" class="text-white">Cadastre-se</a>
-     <a href="/login" class="text-white">Login</a>
-     {% endif %}
-     
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a href="/" class="navbar-brand">Página inicial</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/sobre" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contatos" class="nav-link">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/projetos" class="nav-link">Projetos</a>
+                    </li>
+                    {% if session['email'] %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Olá, {{ session['nome'].capitalize() }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <h6 class="dropdown-header">Informações do Usuário</h6>
+                            <div class="dropdown-divider"></div>
+                            <p class="dropdown-item"><strong>Nome:</strong> {{ session['nome'] }}</p>
+                            <p class="dropdown-item"><strong>Email:</strong> {{ session['email'] }}</p>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/editar">Editar Dados</a>
+                            <a class="dropdown-item" href="/sair">Sair</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/excluir_conta" onclick="return confirm('Tem certeza de que deseja excluir sua conta? Essa ação é irreversível.');">Excluir Conta</a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="/cadastro" class="nav-link">Cadastre-se</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
     </nav>
          
     <div class="container mt-4">
@@ -32,11 +64,9 @@
     </div>
        
     <footer class="bg-dark text-white text-center py-3">
-        <p>Programado por Cylene Santos &copy; 2023</p>
+        <p>Cylene Mota Neves Santos. Todos os direitos reservados. &copy; 2023</p> 
     </footer>
 
-    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
