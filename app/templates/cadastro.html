@@ -6,20 +6,73 @@
     <form action="{{ url_for('cadastrar') }}" method="post">
         {{ cadastro.csrf_token }}
         
-        <label for="nome">Nome:</label>
-        {{ cadastro.nome }}
-        
-        <label for="sobrenome">Sobrenome:</label>
-        {{ cadastro.sobrenome }}
-        
-        <label for="email">E-mail:</label>
-        {{ cadastro.email }}
-        
-        <label for="senha">Senha:</label>
-        {{ cadastro.senha }}
-        
-       
-        {{ cadastro.enviar }}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    {{ cadastro.nome }}
+                </div>
+                
+                <div class="form-group">
+                    <label for="sobrenome">Sobrenome:</label>
+                    {{ cadastro.sobrenome }}
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    {{ cadastro.email }}
+                </div>
+
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    {{ cadastro.cpf }}
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    {{ cadastro.telefone }}
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="endereco_rua">Endereço (Nome da Rua):</label>
+                    {{ cadastro.endereco_rua }}
+                </div>
+                
+                <div class="form-group">
+                    <label for="endereco_bairro">Bairro:</label>
+                    {{ cadastro.endereco_bairro }}
+                </div>
+                
+                <div class="form-group">
+                    <label for="endereco_cidade">Cidade:</label>
+                    {{ cadastro.endereco_cidade }}
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco_cep">CEP:</label>
+                    {{ cadastro.endereco_cep }}
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco_uf">UF:</label>
+                    {{ cadastro.endereco_uf }}
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    {{ cadastro.senha }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group text-center">
+            {{ cadastro.enviar }}
+        </div>
     </form>
 </section>
 {% endblock %}
+
+
+

@@ -29,6 +29,41 @@
             <label for="email" class="form-label">E-mail:</label>
             <input type="email" id="email" name="email" class="form-control" value= "{{ session['email'] }}">
         </div>
+
+        <div class="mb-3">
+            <label for="cpf" class="form-label">CPF:</label>
+            <input type="cpf" id="cpf" name="cpf" class="form-control" value= "{{ session['cpf'] }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone:</label>
+            <input type="telefone" id="telefone" name="telefone" class="form-control" value= "{{ session['telefone'] }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="endereco_rua" class="form-label">Endereço (Rua com Número):</label>
+            <input type="endereco_rua" id="endereco_rua" name="endereco_rua" class="form-control" value= "{{ session['endereco_rua'] }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="endereco_bairro" class="form-label">Bairro:</label>
+            <input type="endereco_bairro" id="endereco_bairro" name="endereco_bairro" class="form-control" value= "{{ session['endereco_bairro'] }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="endereco_cep" class="form-label">CEP:</label>
+            <input type="endereco_cep" id="endereco_cep" name="endereco_cep" class="form-control" value= "{{ session['endereco_cep'] }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="endereco_cidade" class="form-label">Cidade:</label>
+            <input type="endereco_cidade" id="endereco_cidade" name="endereco_cidade" class="form-control" value= "{{ session['endereco_cidade'] }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="endereco_uf" class="form-label">UF:</label>
+            <input type="endereco_uf" id="endereco_uf" name="endereco_uf" class="form-control" value= "{{ session['endereco_uf'] }}">
+        </div>
         
         <div class="mb-3">
             <label for="senha" class="form-label">Senha:</label>

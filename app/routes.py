@@ -64,9 +64,16 @@ def cadastrar():
         nome = cadastro.nome.data
         sobrenome = cadastro.sobrenome.data
         email = cadastro.email.data
+        cpf = cadastro.cpf.data
+        telefone = cadastro.telefone.data
+        endereco_rua = cadastro.endereco_rua.data
+        endereco_cep = cadastro.endereco_cep.data
+        endereco_bairro = cadastro.endereco_bairro.data
+        endereco_cidade = cadastro.endereco_cidade.data
+        endereco_uf = cadastro.endereco_uf.data
         senha = cadastro.senha.data
         hash_senha = bcrypt.generate_password_hash(senha).decode('utf-8')
-        novo_cadastro = CadastroModel(nome=nome, sobrenome=sobrenome, email=email, senha=hash_senha)
+        novo_cadastro = CadastroModel(nome=nome, sobrenome=sobrenome, email=email, cpf=cpf, telefone=telefone, endereco_rua=endereco_rua, endereco_cep=endereco_cep, endereco_bairro=endereco_bairro, endereco_cidade=endereco_cidade,endereco_uf=endereco_uf,senha=hash_senha)
         db.session.add(novo_cadastro)
         db.session.commit()
         
@@ -110,8 +117,20 @@ def editar():
         flash('Seus dados foram atualizados com sucesso')
 
 
-    return render_template ('editar.html', titulo = 'Editar')
+    return render_template ('editar.html', titulo = 'Editar', usuario=usuario)
 
+@app.route('/excluir_conta', methods=['GET'])
+def excluir_conta():
+    if 'email'not in session:
+        return redirect (url_for('login'))
+    
+    usuario = CadastroModel.query.filter_by(email = session['email']).first()
+    db.session.delete(usuario)
+    db.session.commit()
+    session.clear()
+
+    flash('Sua conta foi excluida com sucesso!')
+    return redirect(url_for('cadastrar'))
 
 
 
